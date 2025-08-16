@@ -1,7 +1,0 @@
-USE Estudos;
-
-CREATE TABLE IF NOT EXISTS alunos (
-    id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(30) NOT NULL,
-    idade INT NOT NULL CHECK (idade > 0)
-);
