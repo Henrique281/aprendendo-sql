@@ -1,13 +1,7 @@
--- Seleciona o banco de estudo
-CREATE DATABASE Estudos;
 USE Estudos;
 
--- Criação da tabela aluno
-CREATE TABLE aluno (
-    id INT PRIMARY KEY,
+CREATE TABLE IF NOT EXISTS alunos (
+    id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(30) NOT NULL,
-    idade INT
+    idade INT NOT NULL CHECK (idade > 0)
 );
-
--- Mostrar as tabelas existentes
-SHOW TABLES;
